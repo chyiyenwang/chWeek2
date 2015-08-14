@@ -1,0 +1,70 @@
+<script>
+  // Monday
+  var Animal = function(s, f) {
+    this.speed = s;
+    this.focus = f;
+  }
+
+  var turtle = new Animal(2, 8),
+      rabbit = new Animal(8, 4);
+
+  var Card = function(suits, ranks) {
+  this.suit = suits;
+  this.rank = ranks;
+  };
+
+
+
+  var deck = [];
+  var suits = ['Clubs', 'Diamond', 'Hearts', 'Spades'];
+  var ranks = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+  for (var i = 0; i < suits.length; i++) {
+    for (var r = 0; r < ranks.length; r++) {
+      deck.push(new Card(suits[i], ranks[r]));
+    };
+  };
+
+
+  // Wednesday
+  var Card = function(suits, ranks) {
+    this.suit = suits;
+    this.rank = ranks;
+  };
+
+  var Deck = function() {
+    this.cards = [];
+
+    this.suits = ['Clubs', 'Diamond', 'Hearts', 'Spades'];
+    this.ranks = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+    this.build = function() {
+      for (var i = 0; i < this.suits.length; i++) {
+        for (var r = 0; r < this.ranks.length; r++) {
+          this.cards.push(new Card(this.suits[i], this.ranks[r]));
+        };
+      };
+    };
+  };
+
+  var Dealer = function() {
+    this.deck = new Deck();
+    this.hand = null;
+
+    this.deal = function() {
+      var h = new Hand(this.deck.cards.pop(), this.deck.cards.pop());
+      return h;
+    };
+
+  var Hand = function(card1, card2) {
+    this.cards = (card1, card2);
+  };
+
+    this.shuffle = function() {
+
+    };
+  };
+
+  var d = new Deck()
+</script>
+
